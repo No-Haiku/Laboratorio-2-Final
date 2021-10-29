@@ -20,7 +20,7 @@ nodoArbolCliente* agregarArbolCliente(nodoArbolCliente* arbol, nodoArbolCliente*
     if(arbol==NULL){
         arbol = nuevo;
     }else{
-        if(nuevo->dato.legajo < arbol->dato.legajo){
+        if(nuevo->dato.nroCliente < arbol->dato.nroCliente){
             arbol->izq = agregarArbolCliente(arbol->izq, nuevo);
         }else{
             arbol->der = agregarArbolCliente(arbol->der, nuevo);
@@ -34,10 +34,10 @@ nodoArbolCliente* agregarArbolClienteSinRepetidos(nodoArbolCliente* arbol, nodoA
     if(arbol==NULL){
         arbol = nuevo;
     }else{
-        if(nuevo->dato.legajo < arbol->dato.legajo){
+        if(nuevo->dato.nroCliente < arbol->dato.nroCliente){
             arbol->izq = agregarArbolClienteSinRepetidos(arbol->izq, nuevo);
         }else{
-            if(nuevo->dato.legajo > arbol->dato.legajo){
+            if(nuevo->dato.nroCliente > arbol->dato.nroCliente){
                 arbol->der = agregarArbolClienteSinRepetidos(arbol->der, nuevo);
             }
         }
@@ -74,16 +74,16 @@ void muestraNodoArbolCliente(nodoArbolPersona* nodo){
     muestraUnCliente(nodo->dato);///CREAR ESTA FUNCION<<<<<<<<<<<<<-----------
 }
 
-nodoArbolCliente* buscaNodoArbolCliente(nodoArbolCliente* arbol, int legajo){
+nodoArbolCliente* buscaNodoArbolCliente(nodoArbolCliente* arbol, int nroCliente){
     nodoArbolCliente* respuesta = NULL;
     if(arbol){
-        if(arbol->dato.legajo == legajo){
+        if(arbol->dato.nroCliente == nroCliente){
             respuesta = arbol;
         }else{
-            if(legajo < arbol->dato.legajo){
-                respuesta = buscaNodoArbolCliente(arbol->izq, legajo);
+            if(nroCliente < arbol->dato.nroCliente){
+                respuesta = buscaNodoArbolCliente(arbol->izq, nroCliente);
             }else{
-                respuesta = buscaNodoArbolCliente(arbol->der, legajo);
+                respuesta = buscaNodoArbolCliente(arbol->der, nroCliente);
             }
         }
     }
@@ -100,6 +100,86 @@ nodoArbolCliente* buscaNodoArbolClientePorNombre(nodoArbolCliente* arbol, char n
             respuesta = buscaNodoArbolClientePorNombre(arbol->izq, nombre);
             if(respuesta == NULL){
                 respuesta = buscaNodoArbolClientePorNombre(arbol->der, nombre);
+            }
+        }
+    }
+
+    return respuesta;
+}
+
+nodoArbolCliente* buscaNodoArbolClientePorApellido(nodoArbolCliente* arbol, char apellido[]){
+    nodoArbolCliente* respuesta = NULL;
+    if(arbol){
+        if(strcmp(apellido, arbol->dato.apellido)==0){
+            respuesta = arbol;
+        }else{
+            respuesta = buscaNodoArbolClientePorApellido(arbol->izq, apellido);
+            if(respuesta == NULL){
+                respuesta = buscaNodoArbolClientePorApellido(arbol->der, apellido);
+            }
+        }
+    }
+
+    return respuesta;
+}
+
+nodoArbolCliente* buscaNodoArbolClientePorDni(nodoArbolCliente* arbol, char dni[]){
+    nodoArbolCliente* respuesta = NULL;
+    if(arbol){
+        if(strcmp(dni, arbol->dato.dni)==0){
+            respuesta = arbol;
+        }else{
+            respuesta = buscaNodoArbolClientePorDni(arbol->izq, dni);
+            if(respuesta == NULL){
+                respuesta = buscaNodoArbolClientePorDni(arbol->der, dni);
+            }
+        }
+    }
+
+    return respuesta;
+}
+
+nodoArbolCliente* buscaNodoArbolClientePorDomicilio(nodoArbolCliente* arbol, char domicilio[]){
+    nodoArbolCliente* respuesta = NULL;
+    if(arbol){
+        if(strcmp(domicilio, arbol->dato.domicilio)==0){
+            respuesta = arbol;
+        }else{
+            respuesta = buscaNodoArbolClientePorDomicilio(arbol->izq, domicilio);
+            if(respuesta == NULL){
+                respuesta = buscaNodoArbolClientePorDomicilio(arbol->der, domicilio);
+            }
+        }
+    }
+
+    return respuesta;
+}
+
+nodoArbolCliente* buscaNodoArbolClientePorEmail(nodoArbolCliente* arbol, char email[]){
+    nodoArbolCliente* respuesta = NULL;
+    if(arbol){
+        if(strcmp(email, arbol->dato.email)==0){
+            respuesta = arbol;
+        }else{
+            respuesta = buscaNodoArbolClientePorEmail(arbol->izq, email);
+            if(respuesta == NULL){
+                respuesta = buscaNodoArbolClientePorEmail(arbol->der, email);
+            }
+        }
+    }
+
+    return respuesta;
+}
+
+nodoArbolCliente* buscaNodoArbolClientePorMovil(nodoArbolCliente* arbol, char movil[]){
+    nodoArbolCliente* respuesta = NULL;
+    if(arbol){
+        if(strcmp(movil, arbol->dato.movil)==0){
+            respuesta = arbol;
+        }else{
+            respuesta = buscaNodoArbolClientePorMovil(arbol->izq, movil);
+            if(respuesta == NULL){
+                respuesta = buscaNodoArbolClientePorMovil(arbol->der, movil);
             }
         }
     }

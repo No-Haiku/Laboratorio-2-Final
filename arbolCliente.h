@@ -18,5 +18,10 @@ nodoArbolCliente* agregarArbolClienteSinRepetidos(nodoArbolCliente* arbol, nodoA
 void preOrdenCliente(nodoArbolCliente* arbol);
 void enOrdenCliente(nodoArbolCliente* arbol);
 void postOrdenCliente(nodoArbolCliente* arbol);
+nodoArbolCliente* buscaNodoArbolClientePorApellido(nodoArbolCliente* arbol, char apellido[]);
+nodoArbolCliente* buscaNodoArbolClientePorDni(nodoArbolCliente* arbol, char dni[]);
+nodoArbolCliente* buscaNodoArbolClientePorEmail(nodoArbolCliente* arbol, char email[]);
+nodoArbolCliente* buscaNodoArbolClientePorDomicilio(nodoArbolCliente* arbol, char domicilio[]);
+nodoArbolCliente* buscaNodoArbolClientePorMovil(nodoArbolCliente* arbol, char movil[]);
 
 #endif // ARBOLPERSONA_H_INCLUDED
