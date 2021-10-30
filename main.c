@@ -6,6 +6,7 @@
 ///Ver despues que las estructuras no hagan conflicto con las .H y C
 ///comentarioooo
 ///ddd
+/// santii
 typedef struct
 {
     int id; /// campo único y autoincremental
