@@ -4,6 +4,7 @@
 
 #define ANIO_ACTUAL 2021
 ///Ver despues que las estructuras no hagan conflicto con las .H y C
+///comentarioooo
 typedef struct
 {
     int id; /// campo único y autoincremental
