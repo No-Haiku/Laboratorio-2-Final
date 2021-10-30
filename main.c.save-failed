@@ -3,7 +3,7 @@
 #include <string.h>
 
 #define ANIO_ACTUAL 2021
-///Ver despues que las estructuras no hagan conflicto con las .H y C
+
 typedef struct
 {
     int id; /// campo único y autoincremental
@@ -89,7 +89,7 @@ int main()
 
          scanf("%d",&opcion2);
 
-        system("cls");
+
          switch(opcion2)
          {
          case 1:
@@ -357,8 +357,7 @@ void modificaCliente(char archivo[],int nroClnt)
     int opcion=0;
     if(archi)
     {
-        printf("\t\t\nPara modificar precione\n*1 para alta\n*2 para baja\n*3 Nombre\n*4 para apellido\n*5 D.N.I\n*6 para Email\n*7 para domicilio\n*8 para movil\n*9 para volver al menu principal\n");
-
+        printf("\t\t\nPara modificar precione\n*1 para alta\n*2 para baja\n*3 Nombre\n*4 para apellido\n*5 D.N.I\n*6 para Email\n*7 para domicilio\n*8 para movil\n");
         scanf("%d",&opcion);
         while(fread(&a,sizeof(stCliente),1,archi)>0)
         {
@@ -403,9 +402,6 @@ void modificaCliente(char archivo[],int nroClnt)
                     printf("Ingrese movil\n");
                     scanf("%s",a.movil);
                     break;
-                case 9:
-                    main();
-                    break;
                 }
 
                 fseek(archi,-1*sizeof(stCliente),SEEK_CUR);
@@ -418,7 +414,7 @@ void modificaCliente(char archivo[],int nroClnt)
     }
 
 }
-///----------------------------------------------------------->VER QUE NO EXISTA CONFLICTO CON LA LIBRERIA
+
 void muestraUnCliente(stCliente a)
 {
 
@@ -432,7 +428,6 @@ void muestraUnCliente(stCliente a)
     printf("Movil: %s\n",a.movil);
     printf("Estado %d\n",a.baja);
 }
-///--------------------------------------------------------<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 ///Filtra los clientes
 void filtraClientes(char archivo[],char archivoConsumo[])
 {
