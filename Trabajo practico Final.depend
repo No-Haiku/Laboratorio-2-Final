@@ -4,15 +4,23 @@
 	<stdlib.h>
 	<string.h>
 
-1635603011 source:c:\users\santiago\desktop\tp-final-lab-2\laboratorio-2-final\cliente.c
-	<stdio.h>
-	<stdlib.h>
+1636678096 source:c:\users\santiago\desktop\tp-final-lab-2\laboratorio-2-final\cliente.c
 	"cliente.h"
 
 1635603011 c:\users\santiago\desktop\tp-final-lab-2\laboratorio-2-final\cliente.h
 
-1635603391 source:c:\users\santiago\desktop\tp-final-lab-2\laboratorio-2-final\main.c
+1636678096 source:c:\users\santiago\desktop\tp-final-lab-2\laboratorio-2-final\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
+	"arbolCliente.h"
+	"cliente.h"
+
+1636677693 source:c:\users\santiago\desktop\tp-final-lab-2\laboratorio-2-final\arbolcliente.c
+	<stdio.h>
+	<stdlib.h>
+	"arbolCliente.h"
+
+1636677994 c:\users\santiago\desktop\tp-final-lab-2\laboratorio-2-final\arbolcliente.h
+	"cliente.h"
 

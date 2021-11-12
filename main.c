@@ -1,35 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "arbolCliente.h"
+#include "cliente.h"
 
 #define ANIO_ACTUAL 2021
 ///Ver despues que las estructuras no hagan conflicto con las .H y C
 ///comentarioooo
 ///ddd
 /// santii
-typedef struct
-{
-    int id; /// campo único y autoincremental
-    int nroCliente;
-    char nombre[30];
-    char apellido[30];
-    char dni[10];
-    char email[30];
-    char domicilio[45];
-    char movil[12];
-    int baja; /// 0 si está activo - 1 si está eliminado
-} stCliente;
 
-typedef struct
-{
-    int id; /// campo único y autoincremental
-    int idCliente;
-    int anio;
-    int mes; /// 1 a 12
-    int dia; /// 1 a … dependiendo del mes
-    int datosConsumidos; /// expresados en mb.
-    int baja; /// 0 si está activo - 1 si está eliminado
-} stConsumos;
+
+
 
 void cargaNombreYapellido(char archivo[]);
 void muestraArchivo(char archivo[]);
@@ -422,19 +404,7 @@ void modificaCliente(char archivo[],int nroClnt)
 
 }
 ///----------------------------------------------------------->VER QUE NO EXISTA CONFLICTO CON LA LIBRERIA
-void muestraUnCliente(stCliente a)
-{
 
-    printf("ID -%d-\n",a.id);
-    printf("Numero de cliente: %d\n",a.nroCliente);
-    printf("Nombre: %s\n",a.nombre);
-    printf("Apellido: %s\n",a.apellido);
-    printf("D.N.I: %s\n",a.dni);
-    printf("Email: %s\n",a.email);
-    printf("Domicilio: %s\n",a.domicilio);
-    printf("Movil: %s\n",a.movil);
-    printf("Estado %d\n",a.baja);
-}
 ///--------------------------------------------------------<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 ///Filtra los clientes
 void filtraClientes(char archivo[],char archivoConsumo[])

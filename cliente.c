@@ -1,8 +1,7 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "cliente.h"
+void muestraUnCliente(stCliente a)
+{
 
-void muestraUnCliente(stCliente a){
     printf("ID -%d-\n",a.id);
     printf("Numero de cliente: %d\n",a.nroCliente);
     printf("Nombre: %s\n",a.nombre);

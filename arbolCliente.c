@@ -62,15 +62,15 @@ void enOrdenCliente(nodoArbolCliente* arbol){
     }
 }
 
-void postOrdenPersona(nodoArbolPersona* arbol){
+void postOrdenCliente(nodoArbolCliente* arbol){
     if(arbol){
-        postOrdenPersona(arbol->izq);
-        postOrdenPersona(arbol->der);
-        muestraNodoArbolPersona(arbol);
+        postOrdenCliente(arbol->izq);
+        postOrdenCliente(arbol->der);
+        muestraNodoArbolCliente(arbol);
     }
 }
 
-void muestraNodoArbolCliente(nodoArbolPersona* nodo){
+void muestraNodoArbolCliente(nodoArbolCliente* nodo){
     muestraUnCliente(nodo->dato);///CREAR ESTA FUNCION<<<<<<<<<<<<<-----------
 }
 
