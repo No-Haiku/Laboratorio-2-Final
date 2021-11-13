@@ -203,29 +203,29 @@ nodoArbolCliente* cargarArbolDesdeArchivo(char nombreArchivo[])
     archivo = fopen(nombreArchivo, "rb");
     if(archivo != NULL)
     {
-        //Movemos el cursor hacia la mitad del archivo
+
         fseek(archivo, (cantClientes  * sizeof(stCliente)), SEEK_SET);
-        //Pasamos del archivo al auxiliar
+
         fread(&aux, sizeof(stCliente), 1, archivo);
-        //Ingresamos el producto en el arbol
+
         arbol = agregarArbolCliente(arbol, aux);
-        //Volvemos al principio del archivo
+
         rewind(archivo);
-        //Cargamos los numeros impares
+
         while(fread(&aux, sizeof(stCliente), 1, archivo) > 0)
         {
-            //Verifica si la id del producto es impar y si no es la misma que ya esta cargada en la raiz
+
             if(aux.id %2 == 1 && aux.id != arbol->dato.id)
             {
                 arbol = agregarArbolCliente(arbol, aux);
             }
         }
-        //Volvemos otra vez al inicio
+
         rewind(archivo);
-        //Ahora cargamos los numeros pares
+
         while(fread(&aux, sizeof(stCliente), 1, archivo) > 0)
         {
-            //Verifica si la id del producto es par y si no es la misma que ya esta cargada en la raiz
+
             if(aux.id %2 == 0 && aux.id != arbol->dato.id)
             {
                 arbol = agregarArbolCliente(arbol, aux);
