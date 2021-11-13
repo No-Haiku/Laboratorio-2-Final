@@ -24,3 +24,26 @@
 1636677994 c:\users\santiago\desktop\tp-final-lab-2\laboratorio-2-final\arbolcliente.h
 	"cliente.h"
 
+1636759978 source:c:\users\haiku\desktop\laboratorio-2-final\arbolcliente.c
+	<stdio.h>
+	<stdlib.h>
+	"arbolCliente.h"
+
+1636762732 c:\users\haiku\desktop\laboratorio-2-final\arbolcliente.h
+	"cliente.h"
+
+1636762619 c:\users\haiku\desktop\laboratorio-2-final\cliente.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1636762408 source:c:\users\haiku\desktop\laboratorio-2-final\cliente.c
+	"cliente.h"
+
+1636759978 source:c:\users\haiku\desktop\laboratorio-2-final\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"arbolCliente.h"
+	"cliente.h"
+

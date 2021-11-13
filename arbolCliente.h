@@ -26,7 +26,7 @@ typedef struct
 
 nodoArbolCliente* inicArbolCliente();
 nodoArbolCliente* crearNodoArbolCliente(stCliente dato);
-nodoArbolCliente* agregarArbolCliente(nodoArbolCliente* arbol, nodoArbolCliente* nuevo);
+nodoArbolCliente* agregarArbolCliente(nodoArbolCliente* arbol, stCliente nuevo);
 nodoArbolCliente* agregarArbolClienteSinRepetidos(nodoArbolCliente* arbol, nodoArbolCliente* nuevo);
 void muestraUnCliente(stCliente a);
 void preOrdenCliente(nodoArbolCliente* arbol);
@@ -37,5 +37,5 @@ nodoArbolCliente* buscaNodoArbolClientePorDni(nodoArbolCliente* arbol, char dni[
 nodoArbolCliente* buscaNodoArbolClientePorEmail(nodoArbolCliente* arbol, char email[]);
 nodoArbolCliente* buscaNodoArbolClientePorDomicilio(nodoArbolCliente* arbol, char domicilio[]);
 nodoArbolCliente* buscaNodoArbolClientePorMovil(nodoArbolCliente* arbol, char movil[]);
-
+nodoArbolCliente* cargarArbolDesdeArchivo(char nombreArchivo[]);
 #endif // ARBOLPERSONA_H_INCLUDED
