@@ -20,4 +20,3 @@ int contarCantidadClientes(char nombreArchivo[]);
 
 #endif // CLIENTE_H_INCLUDED
 
-/// se ve esto
