@@ -3,7 +3,7 @@
 #include <string.h>
 #include "arbolCliente.h"
 #include "cliente.h"
-
+#include "consumo.h"
 #define ANIO_ACTUAL 2021
 ///Ver despues que las estructuras no hagan conflicto con las .H y C
 ///comentarioooo
@@ -26,7 +26,7 @@ void muestraXRangoDeAnios(char consumos[],stCliente b);
 void muestraXMes(char consumos[],stCliente b);
 void muestraXDatosConsumosFiltro(char consumos[],stCliente b,stConsumos c);
 void cargaDatosConsumo(char archivoConsumo[],stCliente b);
-void muestraUnConsumo(stConsumos a);
+void muestraUnConsumo2(stConsumos a);///esta la modifique
 int verificaSiRepiteDatoCliente(char archivo[],int id,stCliente a);
 int cuentaRegistros(char archivo[], int tamanioSt);
 void guardaNroClienteMemoriaDinamica(int arreglo[],int dim,int validos,int dato);
@@ -729,7 +729,7 @@ void modificaConsumo(char archivo[],int nroClnt,stConsumos b)
 
 }
 ///MUESTRA CONSUMOS
-void muestraUnConsumo(stConsumos a)
+void muestraUnConsumo2(stConsumos a)
 {
     printf("ID -%d-\n",a.id);
     printf("Numero de cliente: %d\n",a.idCliente);

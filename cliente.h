@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "consumo.h"
 typedef struct
 {
     int id; /// campo único y autoincremental
