@@ -35,10 +35,6 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="arbolCliente.h" />
-		<Unit filename="arbolConsumo.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="arbolConsumo.h" />
 		<Unit filename="cliente.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -47,6 +43,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="consumo.h" />
+		<Unit filename="listaConsumo.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="listaConsumo.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
