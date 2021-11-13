@@ -697,3 +697,105 @@
 1606143080 source:c:\users\lauta\desktop\tp final lab 2  modificado\tp final lab 2  modificado\variasconsumos.c
 	"variasConsumos.h"
 
+1625511841 source:c:\users\haiku\desktop\laboratorio-2-final\arbol.c
+	"Arbol.h"
+
+1625511841 c:\users\haiku\desktop\laboratorio-2-final\arbol.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"unCliente.h"
+	"unConsumo.h"
+	"listaSimple.h"
+
+1625511841 c:\users\haiku\desktop\laboratorio-2-final\uncliente.h
+	<string.h>
+	<stdio.h>
+
+1625511841 c:\users\haiku\desktop\laboratorio-2-final\unconsumo.h
+	"unCliente.h"
+	"variasClientes.h"
+	"utilidades.h"
+
+1625511841 c:\users\haiku\desktop\laboratorio-2-final\variasclientes.h
+	<string.h>
+	<stdio.h>
+	"unCliente.h"
+	"menu.h"
+
+1625511841 c:\users\haiku\desktop\laboratorio-2-final\menu.h
+	"gotoxy.h"
+	<stdio.h>
+	<stdlib.h>
+
+1625511841 c:\users\haiku\desktop\laboratorio-2-final\gotoxy.h
+
+1625511841 c:\users\haiku\desktop\laboratorio-2-final\utilidades.h
+	"unCliente.h"
+	"variasClientes.h"
+
+1625511841 c:\users\haiku\desktop\laboratorio-2-final\listasimple.h
+	<stdio.h>
+	<malloc.h>
+	<string.h>
+	"unConsumo.h"
+
+1625511841 source:c:\users\haiku\desktop\laboratorio-2-final\gotoxy.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+
+1625511841 source:c:\users\haiku\desktop\laboratorio-2-final\listasimple.c
+	"listaSimple.h"
+
+1625511841 source:c:\users\haiku\desktop\laboratorio-2-final\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<windows.h>
+	<conio.h>
+	<string.h>
+	"gotoxy.h"
+	"unCliente.h"
+	"variasClientes.h"
+	"pasajes.h"
+	"utilidades.h"
+	"unConsumo.h"
+	"variasConsumos.h"
+	"menu.h"
+	"Arbol.h"
+
+1625511841 c:\users\haiku\desktop\laboratorio-2-final\pasajes.h
+	<string.h>
+	<stdio.h>
+	"unCliente.h"
+	"unConsumo.h"
+
+1625511841 c:\users\haiku\desktop\laboratorio-2-final\variasconsumos.h
+	"unConsumo.h"
+	"menu.h"
+
+1625511841 source:c:\users\haiku\desktop\laboratorio-2-final\menu.c
+	"menu.h"
+
+1625511841 source:c:\users\haiku\desktop\laboratorio-2-final\pasajes.c
+	"pasajes.h"
+
+1625511841 source:c:\users\haiku\desktop\laboratorio-2-final\uncliente.c
+	"unCliente.h"
+	"variasClientes.h"
+
+1625511841 source:c:\users\haiku\desktop\laboratorio-2-final\unconsumo.c
+	"unConsumo.h"
+	"variasConsumos.h"
+	"variasClientes.h"
+
+1625511841 source:c:\users\haiku\desktop\laboratorio-2-final\utilidades.c
+	"utilidades.h"
+
+1625511841 source:c:\users\haiku\desktop\laboratorio-2-final\variasclientes.c
+	"variasClientes.h"
+
+1625511841 source:c:\users\haiku\desktop\laboratorio-2-final\variasconsumos.c
+	"variasConsumos.h"
+
