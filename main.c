@@ -3,6 +3,8 @@
 #include <string.h>
 #include "arbolCliente.h"
 #include "cliente.h"
+#include "consumo.h"
+#include "listaConsumo.h"
 
 #define ANIO_ACTUAL 2021
 ///Ver despues que las estructuras no hagan conflicto con las .H y C

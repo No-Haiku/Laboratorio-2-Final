@@ -12,20 +12,23 @@
 	<stdlib.h>
 	<string.h>
 
-1636762924 source:c:\users\santiago\desktop\tp-final-lab-2\laboratorio-2-final\main.c
+1636764972 source:c:\users\santiago\desktop\tp-final-lab-2\laboratorio-2-final\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"arbolCliente.h"
 	"cliente.h"
+	"consumo.h"
+	"listaConsumo.h"
 
 1636764039 source:c:\users\santiago\desktop\tp-final-lab-2\laboratorio-2-final\arbolcliente.c
 	<stdio.h>
 	<stdlib.h>
 	"arbolCliente.h"
 
-1636763038 c:\users\santiago\desktop\tp-final-lab-2\laboratorio-2-final\arbolcliente.h
+1636765387 c:\users\santiago\desktop\tp-final-lab-2\laboratorio-2-final\arbolcliente.h
 	"cliente.h"
+	"listaConsumo.h"
 
 1636759978 source:c:\users\haiku\desktop\laboratorio-2-final\arbolcliente.c
 	<stdio.h>
@@ -50,7 +53,7 @@
 	"arbolCliente.h"
 	"cliente.h"
 
-1636763532 source:c:\users\santiago\desktop\tp-final-lab-2\laboratorio-2-final\consumo.c
+1636764554 source:c:\users\santiago\desktop\tp-final-lab-2\laboratorio-2-final\consumo.c
 	<stdio.h>
 	<stdlib.h>
 	"consumo.h"
@@ -58,4 +61,7 @@
 1636762924 c:\users\santiago\desktop\tp-final-lab-2\laboratorio-2-final\consumo.h
 
 1636763867 source:c:\users\santiago\desktop\tp-final-lab-2\laboratorio-2-final\listaconsumo.c
+
+1636765423 c:\users\santiago\desktop\tp-final-lab-2\laboratorio-2-final\listaconsumo.h
+	"consumo.h"
 

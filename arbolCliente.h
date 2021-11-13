@@ -2,9 +2,11 @@
 #define ARBOLPERSONA_H_INCLUDED
 
 #include "cliente.h"
+#include "listaConsumo.h"
 
 typedef struct _nodoArbolCliente{
     stCliente dato;
+    nodoLista* consumos;
     struct _nodoArbolPersona* izq;
     struct _nodoArbolPersona* der;
 }nodoArbolCliente;
