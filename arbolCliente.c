@@ -16,11 +16,11 @@ nodoArbolCliente* crearNodoArbolCliente(stCliente dato){
     return nuevo;
 }
 
-nodoArbolCliente* agregarArbolCliente(nodoArbolCliente* arbol, nodoArbolCliente* nuevo){
+nodoArbolCliente* agregarArbolCliente(nodoArbolCliente* arbol, stCliente nuevo){
     if(arbol==NULL){
-        arbol = nuevo;
+        arbol = crearNodoArbolCliente(nuevo);
     }else{
-        if(nuevo->dato.nroCliente < arbol->dato.nroCliente){
+        if(nuevo.id < arbol->dato.id){
             arbol->izq = agregarArbolCliente(arbol->izq, nuevo);
         }else{
             arbol->der = agregarArbolCliente(arbol->der, nuevo);
@@ -185,4 +185,54 @@ nodoArbolCliente* buscaNodoArbolClientePorMovil(nodoArbolCliente* arbol, char mo
     }
 
     return respuesta;
+}
+///>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+nodoArbolCliente* cargarArbolDesdeArchivo(char nombreArchivo[])
+{
+    FILE* archivo;
+    //Creamos una stProducto auxiliar para cargar los datos del archivo
+    stCliente aux;
+    nodoArbolCliente* arbol;
+    arbol = inicArbolCliente(arbol);
+    //Primero contamos la cantidad de productos que hay en el archivo para poder distribuir bien los datos en el arbol
+    int cantClientes = contarCantidadClientes(nombreArchivo);
+    //Dividimos la cantidad de productos por 2 para poner un numero intermedio en la raiz
+    cantClientes = cantClientes  / 2;
+
+    archivo = fopen(nombreArchivo, "rb");
+    if(archivo != NULL)
+    {
+        //Movemos el cursor hacia la mitad del archivo
+        fseek(archivo, (cantClientes  * sizeof(stCliente)), SEEK_SET);
+        //Pasamos del archivo al auxiliar
+        fread(&aux, sizeof(stCliente), 1, archivo);
+        //Ingresamos el producto en el arbol
+        arbol = agregarArbolCliente(arbol, aux);
+        //Volvemos al principio del archivo
+        rewind(archivo);
+        //Cargamos los numeros impares
+        while(fread(&aux, sizeof(stCliente), 1, archivo) > 0)
+        {
+            //Verifica si la id del producto es impar y si no es la misma que ya esta cargada en la raiz
+            if(aux.id %2 == 1 && aux.id != arbol->dato.id)
+            {
+                arbol = agregarArbolCliente(arbol, aux);
+            }
+        }
+        //Volvemos otra vez al inicio
+        rewind(archivo);
+        //Ahora cargamos los numeros pares
+        while(fread(&aux, sizeof(stCliente), 1, archivo) > 0)
+        {
+            //Verifica si la id del producto es par y si no es la misma que ya esta cargada en la raiz
+            if(aux.id %2 == 0 && aux.id != arbol->dato.id)
+            {
+                arbol = agregarArbolCliente(arbol, aux);
+            }
+        }
+    }
+    else
+        printf("\nError al abrir el archivo %s (cargarArbolDesdeArchivo)", nombreArchivo);
+    return arbol;
 }
