@@ -16,4 +16,3 @@ typedef struct
 void muestraUnCliente(stCliente a);
 #endif // CLIENTE_H_INCLUDED
 
-/// se ve esto
